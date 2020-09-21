@@ -13,7 +13,7 @@ This talk is geared for those who are writing or working on back-end services in
 
 Most clojure projects use leiningen or maven, which are the two most popular build tools. So if you're going to use clojure it's important to know how to use them. This repository uses the leiningen build tool, this will help us with the following:
 
-    *Project Compilation:* Clojure
+    **Project Compilation:** Clojure
 
 ## Test Selectors
 

@@ -13,13 +13,13 @@ This talk is geared for those who are writing or working on back-end services in
 
 Most clojure projects use leiningen or maven, which are the two most popular build tools. So if you're going to use clojure it's important to know how to use them. This repository uses the leiningen build tool, this will help us with the following:
 
-**Project Compilation:**
+**Project Compilation:** Clojure gets converted into Java bytecode, and Leiningen tasks automate that process.
 
-**Dependency Management:**
+**Dependency Management:** Just like Ruby's bundler and gemfiles, Leiningen automates the process of resolving and downloading the Java jar files that your code depends on.
 
-**Running Tasks:**
+**Running Tasks:** Similar to Ruby's Rake, you can run custom automation tasks written in Clojure.
 
-**Deployment:**
+**Deployment:** Helps with creating Java jars which can be executed or incorporated in other projects. Similar to Ruby gems & project.clj is similar to a gem file.
 
 ## Test Selectors
 

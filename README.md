@@ -21,6 +21,10 @@ Most clojure projects use leiningen or maven, which are the two most popular bui
 
 **Deployment:** Helps with creating Java jars which can be executed or incorporated in other projects. Similar to Ruby gems & project.clj is similar to a gem file.
 
+So let’s get started by adding dependencies to the ***project.clj*** file. Just as an FYI `Clojure libraries` are distributed the same way as other ***JVM languages*** in ***jar files.***
+
+
+
 ## Test Selectors
 
 Leiningen has a `test` task that lets you set metadata on tests so that you can filter a set of tests, basically tagging your tests. This allows you to run just a selection of your tests. You can add a keyword argument and it will invoke that will specify which test from which namespace you want to run. The example below will show you how to declare a test-selector which is added to your project.clj:

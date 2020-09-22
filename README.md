@@ -21,7 +21,7 @@ Most clojure projects use leiningen or maven, which are the two most popular bui
 
 **Deployment:** Helps with creating Java jars which can be executed or incorporated in other projects. Similar to Ruby gems & project.clj is similar to a gem file.
 
-So let’s get started by adding dependencies to the ***project.clj*** file. Just as an FYI `Clojure libraries` are distributed the same way as other ***JVM languages*** in ***jar files.***
+So let’s get started by adding dependencies to the `project.clj` file. Just as an FYI `Clojure libraries` are distributed the same way as other `JVM languages` in `jar files.`
 
 
 

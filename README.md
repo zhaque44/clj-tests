@@ -23,7 +23,29 @@ Most clojure projects use leiningen or maven, which are the two most popular bui
 
 So let’s get started by adding dependencies to the `project.clj` file. Just as an FYI `Clojure libraries` are distributed the same way as other `JVM languages` in `jar files.`
 
+```clojure
+(defproject com.something.servicename "0.1.0-SNAPSHOT"
+  :description "description of the service and what it is doing"
+  :url "http://companyname.com"
+  :min-lein-version "2.0.0"
+  :exclusions [org.clojure/clojure]
+  :dependencies [[org.clojure/clojure "1.8.0"]
+                 [org.clojure/tools.reader "1.2.2"]
+                 [org.clojure/test.check "0.7.0"]
+                 [ring/ring-core "1.5.0"]
+                 [ring/ring-jetty-adapter "1.5.0"]
+                 [clj-http "3.3.0"]
+                 [cheshire "5.6.3"]
+                 [http-kit "2.2.0"]]
+```
 
+Listed below is a description of what was added:
+test.check is a Clojure property based testing tool.
+ring-core is the standard library used to write web apps.
+ring-jetty-adapter is a ring adapter that uses Jetty.
+clj-http is an HTTP library wrapping the Apache HTTPComponents client.
+cheshire is a library that encodes and decodes JSON.
+http-kit is supports concurrent asynchronous calls to a server.
 
 ## Test Selectors
 

@@ -40,12 +40,22 @@ So let’s get started by adding dependencies to the `project.clj` file. Just as
 ```
 
 Listed below is a description of what was added:
-test.check is a Clojure property based testing tool.
-ring-core is the standard library used to write web apps.
-ring-jetty-adapter is a ring adapter that uses Jetty.
-clj-http is an HTTP library wrapping the Apache HTTPComponents client.
-cheshire is a library that encodes and decodes JSON.
-http-kit is supports concurrent asynchronous calls to a server.
+
+`test.check is a Clojure property based testing tool.`
+
+`ring-core is the standard library used to write web apps.`
+
+`ring-jetty-adapter is a ring adapter that uses Jetty.`
+
+`clj-http is an HTTP library wrapping the Apache HTTPComponents client.`
+
+`cheshire is a library that encodes and decodes JSON.`
+
+`http-kit is supports concurrent asynchronous calls to a server.`
+
+## Test Definition
+
+## Assertions
 
 ## Test Selectors
 

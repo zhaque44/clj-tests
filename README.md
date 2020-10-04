@@ -47,6 +47,22 @@ Listed below is a description of what was added:
 
 `http-kit is supports concurrent asynchronous calls to a server.`
 
+## Profiles
+
+Having a `:dev` profile & a `:test` profile defined in your project.clj allows you to be flexible when specifying project specific development/testing tooling. Certain profiles are active by default unless you specify 
+
+```clojure
+:profiles {:dev {:dependencies
+                   [http-kit.fake "0.2.1"]
+                   [http-kit.fake "0.2.1"]
+                   [ring/ring-mock "0.3.1"]]
+                 :plugins [[some-plugin "0.3.10"]]
+                 :resource-paths ["path/to/test-data"]
+           :test {:test-paths ["test"]
+                :dependencies [[org.clojure/test.check "0.7.0"]
+                               [pjstadig/humane-test-output"0.8.1"]]
+```
+
 ## Test Definition
 
 ## Assertions

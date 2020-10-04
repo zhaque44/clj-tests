@@ -32,8 +32,6 @@ So let’s get started by adding dependencies to the `project.clj` file. Just as
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/tools.reader "1.2.2"]
                  [org.clojure/test.check "0.7.0"]
-                 [ring/ring-core "1.5.0"]
-                 [ring/ring-jetty-adapter "1.5.0"]
                  [clj-http "3.3.0"]
                  [cheshire "5.6.3"]
                  [http-kit "2.2.0"]]
@@ -42,10 +40,6 @@ So let’s get started by adding dependencies to the `project.clj` file. Just as
 Listed below is a description of what was added:
 
 `test.check is a Clojure property based testing tool.`
-
-`ring-core is the standard library used to write web apps.`
-
-`ring-jetty-adapter is a ring adapter that uses Jetty.`
 
 `clj-http is an HTTP library wrapping the Apache HTTPComponents client.`
 

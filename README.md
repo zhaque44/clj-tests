@@ -49,7 +49,7 @@ Listed below is a description of what was added:
 
 ## Profiles
 
-Having a `:dev` profile & a `:test` profile defined in your project.clj allows you to be flexible when specifying project specific development/testing tooling. Certain profiles are active by default unless you specify 
+Having a `:dev` profile & a `:test` profile defined in your project.clj allows you to be flexible when specifying project specific development/testing tooling. Certain profiles are active by default unless you specify the `:dev` profile is their active by default, the `:test` profile is not active by default, as you can see in the example belowwe have our `profiles` defined. You should be able to notice how the dev dependent libraries are in a separate block as the test dependent libraries.
 
 ```clojure
 :profiles {:dev {:dependencies

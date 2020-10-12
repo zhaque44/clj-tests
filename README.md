@@ -19,7 +19,7 @@ Most clojure projects use leiningen or maven, which are the two most popular bui
 
 **Running Tasks:** Similar to Ruby's Rake, you can run custom automation tasks written in Clojure.
 
-**Deployment:** Helps with creating Java jars which can be executed or incorporated in other projects. Similar to Ruby gems & project.clj is similar to a gem file.
+**Deployment:** Helps with creating Java jars which can be executed or incorporated in other projects. Similar to Ruby, your project.clj file is the equivalent to a Gemfile.
 
 So let’s get started by adding dependencies to the `project.clj` file. Just as an FYI `Clojure libraries` are distributed the same way as other `JVM languages` in `jar files.`
 

@@ -1,6 +1,6 @@
 # Integration tests in clojure
 
-This talk is geared for those who are writing or working on back-end services in clojure. Also, for individuals who want to learn clojure.
+This project is geared for those who are writing or working on back-end services in clojure. Also, for individuals who want to learn clojure.
 
 ## Usage
     The goal is to use this project to practice and build your clojure skills & increase test coverage 
@@ -65,7 +65,24 @@ Having a `:dev` profile & a `:test` profile defined in your project.clj allows y
 
 ## Test Definition
 
+Before we define our first clojure function we need to define a namespace, every `clojure` source file starts with a namespace declaration. The `ns` macro is will help you define your imports & requires:
+
+```bash
+:require  setting up access to other Clojure namespaces from your code, you can optionally refer functions to the current ns
+:as It is common to make a namespace available under an alias
+```
+
 ## Assertions
+
+```clojure
+(deftest ^:integration get-user-data
+  (testing "testing a GET request which retrieves all users in the system"
+    (let [get-user-info (http/get (url (str "/todos/1"))
+                                {:headers {:content-type :json}})
+          response-body (-> get-user-info :body (json/parse-string true))]
+      (is (= 200 (:status get-user-info)))
+      (is (= 1 (get-in response-body [:userId]))))))
+ ```     
 
 ## Test Selectors
 
@@ -85,3 +102,5 @@ Leiningen has a `test` task that lets you set metadata on tests so that you can 
   (testing "This is a tagged test for demo purposes"
     (is (= true true))))
 ```
+## Running the tests
+

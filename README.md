@@ -67,10 +67,13 @@ Having a `:dev` profile & a `:test` profile defined in your project.clj allows y
 
 Before we define our first clojure function we need to define a namespace, every `clojure` source file starts with a namespace declaration. The `ns` macro is will help you define your imports & requires:
 
-```clojure
-**:require**  setting up access to other Clojure namespaces from your code, you can optionally refer functions to the current ns
+
+**:require**  allows you to set up access to other Clojure namespaces from your codebase
+
 **:as** It is common to make a namespace available under an alias
-```
+
+
+
 
 ## Assertions
 

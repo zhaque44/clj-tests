@@ -49,7 +49,7 @@ Listed below is a description of what was added:
 
 ## Profiles
 
-Having a `:dev` profile & a `:test` profile defined in your project.clj allows you to be flexible when specifying project specific development/testing tooling. Certain profiles are active by default unless you specify the `:dev` profile is their active by default, the `:test` profile is not active by default, as you can see in the example belowwe have our `profiles` defined. You should be able to notice how the dev dependent libraries are in a separate block as the test dependent libraries.
+Having a `:dev` profile & a `:test` profile defined in your project.clj allows you to be flexible when specifying project specific development/testing tooling. Certain profiles are active by default unless you specify the `:dev` profile is their active by default, the `:test` profile is not active by default, as you can see in the example below we have our `profiles` defined. You should be able to notice how the dev dependent libraries are in a separate block as the test dependent libraries.
 
 ```clojure
 :profiles {:dev {:dependencies
@@ -72,7 +72,15 @@ Before we define our first clojure function we need to define a namespace, every
 
 **:as** It is common to make a namespace available under an alias
 
+The `ns` macro allows you to declare the package name and imports. If you navigate to the `tagged_test.clj` file you can see I am defining my package name 
 
+```clojure
+(ns com.climate.test.integration.tagged-test
+  (:require [clojure.test :refer :all]
+            [com.climate.request.clj-http.client :as http]
+            [cheshire.core :refer [decode encode] :as json]
+            [com.climate.configuration.env-config :as config]))
+ ```  
 
 
 ## Assertions

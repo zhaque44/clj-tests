@@ -82,6 +82,18 @@ The `ns` macro allows you to declare the package name and imports. If you naviga
             [com.climate.configuration.env-config :as config]))
  ```  
 
+Let’s write our first test, navigate to the `tagged_test.clj` file & you will see the example listed below:
+
+```clojure
+(deftest test-something-simple
+  (testing "A simple assertion"
+    (is (= 1 1))))
+ ```  
+
+**deftest**  Defines a test function with no arguments
+
+**testing**  Adds a new string which lists the contexts of what is being tested and must occur inside a test function.
+
 
 ## Assertions
 

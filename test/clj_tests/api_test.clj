@@ -2,8 +2,7 @@
 (ns clj-tests.api-test
     (:require [clojure.test :refer :all]
     [clj-http.client :as http]
-    [cheshire.core :refer [decode encode] :as json]
-          clj-tests.web))
+    [cheshire.core :refer [decode encode] :as json]))
 
 (def base-url "https://jsonplaceholder.typicode.com")
 

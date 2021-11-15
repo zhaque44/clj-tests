@@ -125,5 +125,13 @@ Leiningen has a `test` task that lets you set metadata on tests so that you can 
   (testing "This is a tagged test for demo purposes"
     (is (= true true))))
 ```
-## Running the tests
+## Running tagged tests
+```bash
+$ lein test :integration
 
+lein test clj-tests.api-test
+
+Ran 1 tests containing 2 assertions.
+0 failures, 0 errors.
+```
+this basically ran all of the tests in the given namespace, that were tagged with the ^:integration metadata flag. The result was printed summarizing the test results.

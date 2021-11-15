@@ -1,4 +1,3 @@
-
 (ns clj-tests.api-test
     (:require [clojure.test :refer :all]
     [clj-http.client :as http]

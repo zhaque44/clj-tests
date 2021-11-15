@@ -134,4 +134,4 @@ lein test clj-tests.api-test
 Ran 1 tests containing 2 assertions.
 0 failures, 0 errors.
 ```
-this basically ran all of the tests in the given namespace, that were tagged with the ^:integration metadata flag. The result was printed summarizing the test results.
+this basically ran all of the tests in the given namespace, that were tagged with the `^:integration` metadata flag. The result was printed summarizing the test results.

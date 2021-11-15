@@ -1,38 +1,25 @@
-(defproject com.climate/scully "dynamic-version"
-            :description
-            "An integration testing project."
-            :url
-            "https://zubair.com"
-            :min-lein-version "2.0.0"
-            :repositories [["release-bin" {:url           "https://bin/release"
-                                               :username      :env/ARTIFACTORY_SVC_ACCT
-                                               :password      :env/ARTIFACTORY_SVC_ACCT_PWD
-                                               :sign-releases false
-                                               }]]
+(defproject clj-tests "0.1.0-SNAPSHOT"
+  :description "Clojure API Tests"
+  :dependencies [[org.clojure/clojure "1.6.0"]
+                 [clj-http "2.3.0"]
+                 [clj-time "0.13.0"]
+                 [cheshire "5.6.3"]
+                 [http-kit "2.2.0"]
+                 [org.clojure/test.check "0.9.0"]
+                 [compojure "1.3.4"]
+                 [ring-mock "0.1.5"]
+                 [ring/ring-jetty-adapter "1.3.2"]
+                 [environ "1.0.0"]]
+  :min-lein-version "2.0.0"
+  :plugins [[environ/environ.lein "0.2.1"]]
 
-            :source-paths ["src/main/clojure"]
-            :test-paths ["src/test/clojure" "src/test/resources"]
-            :resource-paths ["src/main/resources"]
-            :dependencies
-            [[org.clojure/clojure "1.8.0"]
-             [clj-http "3.3.0"]
-             [clj-time "0.13.0"]
-             [cheshire "5.6.3"]
-             [http-kit "2.2.0"]
-             [org.clojure/test.check "0.9.0"]]
+  :test-selectors {:default     #(not-any? % #{:integration :ignore})
+                   :integration :integration
+                   :ignore      :ignore
+                   :all         (constantly true)}
+          
+  :hooks [environ.leiningen.hooks]
+  :uberjar-name "clj-tests-standalone.jar"
 
-            :profiles {:doc {:plugins      [[lein-marginalia "0.8.0"]]
-                             :dependencies [[marginalia "2015.06.30T22.52.56.e2f8955"]]}}
-
-            :plugins
-            [[lein-cloverage "1.0.3"]
-             [lein-ancient "0.5.5"]]
-
-            :test-selectors {:default     #(not-any? % #{:integration :ignore})
-                             :integration :integration
-                             :service     :service
-                             :ignore      :ignore
-                             :all         (constantly true)}
-
-            :aliases
-            {"docs" ["marg" "-d" "target"]})
+  :profiles {:production {:env {:production true}}
+             :uberjar {:main clj-bootstrap.web, :aot :all}})

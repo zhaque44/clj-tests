@@ -1,8 +1,7 @@
 (ns clj-tests.some-test
   (:require [clojure.test :refer :all]
     :use clojure.test
-        ring.mock.request
-        clj-tests.web))
+        ring.mock.request))
 
 (deftest test-something-simple
   (testing "A simple assertion"
